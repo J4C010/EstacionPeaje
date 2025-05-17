@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.viewController.VistaPeajeController">
+   <children>
+      <VBox>
+         <children>
+            <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Registrar Vehículo">
+                  <content>
+                        <VBox prefHeight="295.0" prefWidth="600.0">
+                           <children>
+                              <Label text="Tipo de Vehículo" />
+                              <ComboBox fx:id="tipoBox" prefWidth="150.0" />
+                              <Label text="Placa" />
+                              <TextField fx:id="placaField" prefHeight="25.0" prefWidth="435.0" />
+                              <Label text="Cilindraje / N Ejes" />
+                              <TextField fx:id="detalle1" />
+                              <Label text="Capacidad de Carga (solo camión)" />
+                              <TextField fx:id="detalle2" />
+                              <Button fx:id="btonRegistrarVehiculo" mnemonicParsing="false" onAction="#onRegistrarVehiculo" text="Registrar" />
+                              <Label fx:id="lblResultado" text="Label" />
+                           </children>
+                        </VBox>
+                  </content>
+                </Tab>
+                <Tab text="Registrar Paso ">
+                     <content>
+                        <VBox>
+                           <children>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="732.0">
+                                 <children>
+                                    <Label layoutX="252.0" layoutY="14.0" text="Placa del Vehículo" />
+                                    <TextField fx:id="placaPasoField" layoutX="226.0" layoutY="40.0" />
+                                    <Button fx:id="btonRegistrarPaso" layoutX="255.0" layoutY="78.0" mnemonicParsing="false" onAction="#onRegistrarPaso" text="Registrar Paso" />
+                                    <Label fx:id="lblResultadoPaso" layoutX="286.0" layoutY="111.0" text="Label" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </content>
+                </Tab>
+                  <Tab text="Ver Recaudo">
+                     <content>
+                        <VBox>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="btonMostrarTotal" layoutX="256.0" layoutY="25.0" mnemonicParsing="false" onAction="#onMostrarTotal" text="Mostrar Total" />
+                                    <Label fx:id="lblTotalRecaudo" layoutX="286.0" layoutY="68.0" text="Label" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
