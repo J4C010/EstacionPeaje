@@ -1,5 +1,9 @@
 package co.edu.uniquindio.model;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Conductor extends Persona {
     private List<Vehiculo> vehiculos = new ArrayList<>();
 

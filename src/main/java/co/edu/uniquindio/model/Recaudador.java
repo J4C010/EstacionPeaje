@@ -1,5 +1,7 @@
 package co.edu.uniquindio.model;
 
+import java.time.LocalDate;
+
 public class Recaudador extends Persona {
     private double sueldoMensual;
 
